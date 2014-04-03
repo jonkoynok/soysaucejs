@@ -156,14 +156,12 @@ soysauce.togglers = (function() {
     }
     else {
       this.allButtons.attr("data-ss-state", "closed");
-      this.allContent.attr("data-ss-state", "closed");
       this.widget.attr("data-ss-state", "closed");
       this.opened = false;
     }
 
     if (this.slide) {
       this.widget.find("> [data-ss-component='content'][data-ss-state='open']").attr("data-ss-open-onload", "true");
-      this.allContent.attr("data-ss-state", "open");
 
       this.allContent.each(function() {
         var content = $(this);
