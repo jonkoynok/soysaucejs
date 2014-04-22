@@ -127,6 +127,10 @@ soysauce.overlay = (function() {
       additionalOptions += "finite";
     }
 
+    if (!carousel.swipe) {
+       additionalOptions = [additionalOptions, "noswipe"].join(" ");
+    }
+
     items.removeAttr("data-ss-state").removeAttr("style");
     this.content.wrapInner("<div data-ss-widget='carousel' data-ss-options='overlay " + additionalOptions + "' data-ss-index=" + carousel.index + "/>");
 
